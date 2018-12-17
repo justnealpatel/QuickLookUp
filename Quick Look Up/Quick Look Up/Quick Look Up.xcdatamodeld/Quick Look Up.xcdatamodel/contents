@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="account" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="dateFound" attributeType="String" syncable="YES"/>
+        <attribute name="detail" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isExpired" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="shouldRedact" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="account" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="items" inverseEntity="Account" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="item" inverseEntity="Message" syncable="YES"/>
+    </entity>
+    <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
+        <attribute name="body" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSender" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="item" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="messages" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-338.95703125" positionY="-32.13671875" width="128" height="75"/>
+        <element name="Item" positionX="-269.9140625" positionY="-316.00390625" width="128" height="165"/>
+        <element name="Message" positionX="-452.83203125" positionY="-402.38671875" width="128" height="120"/>
+    </elements>
+</model>

@@ -1,0 +1,25 @@
+PODS:
+  - AWSCognito (2.7.3):
+    - AWSCore (= 2.7.3)
+  - AWSCore (2.7.3)
+  - SwipeCellKit (2.5.0)
+
+DEPENDENCIES:
+  - AWSCognito
+  - AWSCore
+  - SwipeCellKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AWSCognito
+    - AWSCore
+    - SwipeCellKit
+
+SPEC CHECKSUMS:
+  AWSCognito: 498ea00401cfd684616f8a747396d95fd750fb5a
+  AWSCore: 02d9ae2b6c2aaba6077fee2b09b0a62fb9b80282
+  SwipeCellKit: d8f2617538ce3021cb0a11d1b93856a06a2f2e20
+
+PODFILE CHECKSUM: 9f3db80ba5e37379a04771461c212cd2a094482d
+
+COCOAPODS: 1.5.3
